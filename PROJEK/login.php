@@ -1,41 +1,55 @@
 <?php
 session_start();
 
-$errorMessage = '';
+$errorMessage = '';  // Default kosong
 $usersFile = 'users.txt'; // File untuk menyimpan data pengguna
 
 // Memproses login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $isUserExists = false;
+    $isPasswordCorrect = false;
 
     // Cek apakah file pengguna ada
     if (file_exists($usersFile)) {
         $users = file($usersFile); // Membaca semua baris dari file
 
+        // Looping untuk cek username dan password
         foreach ($users as $user) {
             list($storedUsername, $storedPassword) = explode(',', trim($user)); // Memisahkan username dan password
 
-            // Memeriksa kecocokan username dan password
-            if ($username === $storedUsername && $password === trim($storedPassword)) {
-                $_SESSION['username'] = $username; 
-                header('Location: dashboard.php'); 
-                exit();
+            if ($username === $storedUsername) {
+                $isUserExists = true; // Jika username ditemukan
+                if ($password === trim($storedPassword)) {
+                    $isPasswordCorrect = true; // Jika password cocok
+                }
+                break;
             }
         }
     }
 
-    // Jika login gagal
-    $errorMessage = "Username atau password salah!";
+    if (!$isUserExists) {
+        // Jika pengguna tidak terdaftar
+        $errorMessage = 'Akun belum ada, silakan buat akun terlebih dahulu.';
+    } elseif (!$isPasswordCorrect) {
+        // Jika username benar tapi password salah
+        $errorMessage = 'Username atau password salah!';
+    } else {
+        // Jika login berhasil
+        $_SESSION['username'] = $username; 
+        header('Location: dashboard.php');
+        exit();
+    }
 }
 
+// Cek jika sudah login
 if (isset($_SESSION['username'])) {
     header('Location: dashboard.php');
     exit();
 }
 ?>
 
-<!-- HTML untuk login -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,12 +66,14 @@ if (isset($_SESSION['username'])) {
             <div class="form-box">
                 <div class="login-box">
                     <h2>Welcome</h2>
-                    <!-- Menampilkan pesan kesalahan di sini -->
+
+                    <!-- Tampilkan alert jika ada pesan error -->
                     <?php if ($errorMessage): ?>
-                        <div class="error-message" style="color: red; margin-bottom: 10px;">
-                            <?php echo $errorMessage; ?>
-                        </div>
+                        <script>
+                            alert('<?php echo $errorMessage; ?>');
+                        </script>
                     <?php endif; ?>
+
                     <form action="login.php" method="POST">
                         <div class="input-box">
                             <label for="username">Username</label>
