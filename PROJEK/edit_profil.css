@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Align items to the left */
+    max-width: 600px;
+    align-items: center;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-right: 30px; /* Space between header and form */
+}
+
+.profile-img {
+    width: 150px; /* Fixed width for profile image */
+    height: 150px; /* Fixed height for profile image */
+    border-radius: 50%; /* Circle shape */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    margin-bottom: 10px; /* Space below image */
+}
+
+.upload-photo {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-photo:hover {
+    background-color: #0056b3;
+}
+
+.right {
+    flex: 2; /* Right section for form fields */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 300px; /* Fixed width for form inputs */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all form fields to the left */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
