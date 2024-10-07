@@ -1,12 +1,10 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit();
 }
-
 
 if (isset($_GET['logout'])) {
     session_destroy();
@@ -42,9 +40,12 @@ if (isset($_GET['logout'])) {
             <li><a href="#">Kontak</a></li>
         </ul>
         <div class="user-info">
-            <img src="1.png" alt="Profile Picture" class="profile-img">
-            <span>Halo, <?= $_SESSION['username']; ?></span> <!-- Menampilkan nama user dari session -->
-            <a href="dashboard.php?logout=true" class="logout-btn">Logout</a> <!-- Tombol Logout -->
+            <img src="<?= $_SESSION['profile_picture'] ?? 'uploads/default.png'; ?>" alt="Profile Picture" class="profile-img">
+            <span class="username" onclick="toggleDropdown()">Halo, <?= $_SESSION['username']; ?></span>
+            <div class="dropdown-content" id="dropdown">
+                <a href="profil.php" class="logout-btn">Profil</a>
+                <a href="?logout" class="logout-btn">Logout</a>
+            </div>
         </div>
     </div>
 
@@ -57,20 +58,19 @@ if (isset($_GET['logout'])) {
             </div>
             <div class="text-section">
                 <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </section>
 
         <!-- About Section -->
-    <section class="about">
-        <img class="about-ruang-peduli-img" src="aboutUs.png" alt="Doktor Image">
-        <div class="about-ruang-peduli-content">
-            <h3>ABOUT US</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a href="register.html" class="daftar">Laern More</a>
-        </div>
-    </section>
+        <section class="about">
+            <img class="about-ruang-peduli-img" src="aboutUs.png" alt="Doktor Image">
+            <div class="about-ruang-peduli-content">
+                <h3>ABOUT US</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="register.html" class="daftar">Learn More</a>
+            </div>
+        </section>
 
         <!-- Our Service Section -->
         <section class="our-service">
@@ -145,7 +145,24 @@ if (isset($_GET['logout'])) {
             <p>Made With Love by ciwi ciwi developer</p>
         </section>
     </div>
-    
 
+    <script>
+    function toggleDropdown() {
+        document.getElementById("dropdown").classList.toggle("show");
+    }
+
+    // Tutup dropdown jika pengguna mengklik di luar elemen
+    window.onclick = function(event) {
+        if (!event.target.matches('.username')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
