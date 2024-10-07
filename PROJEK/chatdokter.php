@@ -3,14 +3,14 @@ session_start();
 
 
 if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
+    header('Location: login.html');
     exit();
 }
 
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    header('Location: login.php');
+    header('Location: login.html');
     exit();
 }
 ?>
@@ -44,9 +44,11 @@ if (isset($_GET['logout'])) {
         </ul>
         </nav>
         <div class="user-info">
-            <img src="1.png" alt="Profile Picture" class="profile-img">
-            <span>Halo, <?= $_SESSION['username']; ?></span> <!-- Menampilkan nama user dari session -->
-            <a href="login.php" class="logout-btn">Logout</a>
+            <img src="<?= $_SESSION['profile_picture'] ?? 'uploads/default.png'; ?>" alt="Profile Picture" class="profile-img">
+            <span class="username" onclick="toggleDropdown()">Halo, <?= $_SESSION['username']; ?></span>
+                <a href="profil.php" class="logout-btn">Profil</a>
+                <a href="?logout" class="logout-btn">Logout</a>
+            </div>
         </div>
     </header>    
 
