@@ -43,9 +43,7 @@ if (isset($_GET['logout'])) {
         </ul>
         </nav>
         <div class="user-info">
-    <img src="<?= $_SESSION['profile_picture'] ?? 'uploads/default.png'; ?>" alt="Profile Picture" class="profile-img">
     <span>Halo, <?= $_SESSION['username']; ?></span>
-    <a href="edit_profil.php" class="edit-profile-btn">Edit Profil</a> <!-- Tautan untuk mengedit profil -->
     <a href="?logout" class="logout-btn">Logout</a>
 </div>
     </header>
