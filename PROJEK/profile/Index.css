@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.lorem-ipsum {
+    position: absolute;
+    top: 2145px;
+    left: 136px;
+}
+.navbar-child {
+    position: relative;
+    padding:3.5rem ;
+    width: 100%;
+    backdrop-filter: blur(49.2px);
+    background-color: #01bbbd;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+}
+.login {
+    position: relative;
+    font-weight: 600;
+}
+.login-wrapper {
+    position: absolute;
+    height: 46.3%;
+    width: 10.14%;
+    top: 30.56%;
+    right: 4.72%;
+    bottom: 23.15%;
+    left: 85.14%;
+    border-radius: 32px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 38px;
+    box-sizing: border-box;
+}
+.beranda {
+    position: relative;
+    font-weight: 500;
+}
+.beranda-parent {
+    position: absolute;
+    height: 26.85%;
+    width: 29.03%;
+    top: 38.89%;
+    right: 46.39%;
+    bottom: 34.26%;
+    left: 24.58%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 52px;
+    color: #f9f9f9;
+}
+.frame-child {
+    width: 36.5px;
+    position: relative;
+    background-color: #d9d9d9;
+    height: 33.6px;
+}
+.nama-web {
+    position: relative;
+}
+.rectangle-parent {
+    position: absolute;
+    height: 31.11%;
+    width: 12.47%;
+    top: 37.96%;
+    right: 81.35%;
+    bottom: 30.93%;
+    left: 6.18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 23.75px;
+    color: #fff;
+}
+.navbar {
+    position: absolute;
+    top: 0px;
+    left: -1px;
+    width: 1440px;
+    height: 108px;
+    font-size: 24px;
+    color: #01bbbd;
+}
+.group-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 164px;
+    height: 164px;
+    object-fit: cover;
+}
+.elvira-rosa {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-weight: 600;
+}
+.elvirarosagmailcom {
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #a5acac;
+}
+.elvira-rosa-parent {
+    position: absolute;
+    top: 67px;
+    left: 196px;
+    width: 154px;
+    height: 41px;
+}
+.group-item {
+    position: absolute;
+    height: 76.14%;
+    width: 7.94%;
+    top: 23.86%;
+    right: 0%;
+    bottom: 0%;
+    left: 92.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.group-container {
+    position: absolute;
+    top: 50px;
+    left: 47px;
+    width: 504px;
+    height: 176px;
+}
+.group-inner {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    width: 664px;
+    height: 1px;
+    object-fit: contain;
+}
+.jenis-kelamin {
+    position: absolute;
+    top: 72.97px;
+    left: 0px;
+    font-weight: 600;
+}
+.vector-icon {
+    position: absolute;
+    top: 120.97px;
+    left: 0px;
+    width: 664px;
+    height: 2.1px;
+    object-fit: contain;
+}
+.kotakabupaten {
+    position: absolute;
+    top: 147.07px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child1 {
+    position: absolute;
+    top: 195.07px;
+    left: 0px;
+    width: 664px;
+    height: 0.1px;
+    object-fit: contain;
+}
+.nomor-ktp {
+    position: absolute;
+    top: 219.14px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child2 {
+    position: absolute;
+    top: 267.14px;
+    left: 0px;
+    width: 664px;
+    height: 0.1px;
+    object-fit: contain;
+}
+.alamat {
+    position: absolute;
+    top: 291.28px;
+    left: 0px;
+    font-weight: 600;
+}
+.tanggal-lahir-parent {
+    position: absolute;
+    top: 282px;
+    left: 68px;
+    width: 664px;
+    height: 315.3px;
+    color: #858585;
+}
+.group-parent {
+    position: absolute;
+    top: 259px;
+    left: 526px;
+    box-shadow: 0px 4px 16.1px -1px rgba(56, 56, 56, 0.1);
+    border-radius: 32px;
+    background-color: #fefefe;
+    width: 818px;
+    height: 699px;
+    text-align: justify;
+    font-size: 20px;
+    color: #191919;
+}
+.profile-saya {
+    position: absolute;
+    top: 203px;
+    left: 564px;
+    font-weight: 600;
+    color: #191919;
+    text-align: justify;
+}
+.edit-profile-child {
+    position: absolute;
+    top: 1043px;
+    left: 0px;
+    background-color: #01bbbd;
+    width: 1440px;
+    height: 414px;
+}
+.lorem-ipsum1 {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+}
+.lorem-ipsum-dolor {
+    position: absolute;
+    top: 64.13px;
+    left: 0px;
+    font-size: 20px;
+    text-align: justify;
+    display: inline-block;
+    width: 521.7px;
+}
+.lorem-ipsum {
+    position: absolute;
+    top: 0px;
+    left: 72px;
+    font-weight: 500;
+}
+.lorem-ipsum1 {
+    position: absolute;
+    top: 69px;
+    left: 72px;
+    font-weight: 500;
+}
+.lorem-ipsum2 {
+    position: absolute;
+    top: 138px;
+    left: 72px;
+    font-weight: 500;
+}
+.vector-icon {
+    width: 40px;
+    position: relative;
+    height: 35px;
+}
+.vector-parent {
+    position: absolute;
+    top: 5.82px;
+    left: 0px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 27px;
+}
+.lorem-ipsum-parent {
+    width: 100%;
+    position: relative;
+    height: 167px;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.elvira-rosa1 {
+    position: absolute;
+    top: 180px;
+    left: 12px;
+    font-weight: 600;
+}
+.edit-profil {
+    position: absolute;
+    top: 207px;
+    left: 59px;
+    font-size: 14px;
+    color: #9d9d9d;
+}
+.elvira-rosa-group {
+    position: absolute;
+    top: 49px;
+    left: 116px;
+    width: 164px;
+    height: 224px;
+}
+.janji-saya {
+    position: absolute;
+    top: 96.9px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child3 {
+    position: absolute;
+    top: 144.9px;
+    left: 0px;
+    max-height: 100%;
+    width: 284.5px;
+}
+.diskusi-saya {
+    position: absolute;
+    top: 168.9px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child4 {
+    position: absolute;
+    top: 216.9px;
+    left: 0px;
+    max-height: 100%;
+    width: 284.5px;
+}
+.langganan-saya {
+    position: absolute;
+    top: 240.9px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child5 {
+    position: absolute;
+    top: 288.9px;
+    left: 0px;
+    max-height: 100%;
+    width: 284.5px;
+}
+.ubah-pin {
+    position: absolute;
+    top: 312.9px;
+    left: 0px;
+    font-weight: 600;
+}
+.group-child6 {
+    position: absolute;
+    top: 360.9px;
+    left: 0px;
+    max-height: 100%;
+    width: 284.5px;
+}
+.keluar {
+    position: absolute;
+    top: 384.9px;
+    left: 0px;
+    font-weight: 600;
+    color: #dd1f1f;
+}
+.vector-icon1 {
+    position: absolute;
+    height: 2.96%;
+    width: 4.22%;
+    top: 0%;
+    right: 63.27%;
+    bottom: 97.04%;
+    left: 32.51%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.janji-saya-parent {
+    position: absolute;
+    top: 261.1px;
+    left: 63px;
+    width: 284.5px;
+    height: 408.9px;
+}
+.frame-div {
+    position: absolute;
+    top: 201px;
+    left: 101px;
+    box-shadow: 0px 4px 16.1px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+    background-color: #fff;
+    width: 377px;
+    height: 757px;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 20px;
+    color: #191919;
+}
+.edit-profile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #f9f9f9;
+    width: 1440px;
+    height: 1457px;
+    overflow: hidden;
+}
+.edit-profile-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 1457px;
+}
+.profile-inner {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    width: 1440px;
+    height: 1457px;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: Montserrat;
+}
+
