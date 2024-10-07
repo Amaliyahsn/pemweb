@@ -43,9 +43,12 @@ if (isset($_GET['logout'])) {
         </ul>
         </nav>
         <div class="user-info">
-    <span>Halo, <?= $_SESSION['username']; ?></span>
-    <a href="?logout" class="logout-btn">Logout</a>
-</div>
+            <img src="<?= $_SESSION['profile_picture'] ?? 'uploads/default.png'; ?>" alt="Profile Picture" class="profile-img">
+            <span class="username" onclick="toggleDropdown()">Halo, <?= $_SESSION['username']; ?></span>
+                <a href="profil.php" class="logout-btn">Profil</a>
+                <a href="?logout" class="logout-btn">Logout</a>
+            </div>
+        </div>
     </header>
 
     <!-- Main Content -->
