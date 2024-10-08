@@ -63,9 +63,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="#">Kontak</a></li>
             </ul>
             <div class="user-info">
-                <img src="<?= $_SESSION['profile_picture'] ?? 'uploads/default.png'; ?>" alt="Profile Picture"
-                    class="profile-img">
-                <span class="username"  >Halo, <?= $_SESSION['username']; ?></span>
+                <div class="profile-img">
+                    <img src="<?php echo $profilePic; ?>" alt="Profile Picture" class="profile-pic" />
+                </div>
+                <span class="username">Halo, <?= $_SESSION['username']; ?></span>
                 <div class="dropdown-content" id="dropdown">
                     <a href="profil.php" class="logout-btn">Profil</a>
                     <a href="?logout" class="logout-btn">Logout</a>
